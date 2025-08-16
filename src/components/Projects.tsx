@@ -43,7 +43,7 @@ const projects: Project[] = [
     description: 'Aplikasi penyewaan baju berbasis web yang dibuat menggunakan Figma untuk desain antarmukanya.',
     link: 'https://www.figma.com/design/okPLQjxUIq7Wt2m2vZPLno/PROTOTYPE-RECOM',
     repo: '',
-    image: '/projects/desktop-2.png'
+    image: '/projects/Desktop-2.png'
   }
 ]
 
