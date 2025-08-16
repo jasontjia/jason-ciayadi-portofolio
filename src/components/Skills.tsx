@@ -44,7 +44,7 @@ const skillGroups: SkillGroup[] = [
     title: 'Tools & Soft Skills',
     items: [
       { name: 'GitHub', icon: <FaGitAlt className="text-black dark:text-white" /> },
-      { name: 'VS Code', icon: <TbBrandVscode className="text-blue-500"/>},
+      { name: 'VS Code', icon: <TbBrandVscode className="text-blue-500" /> },
       { name: 'Figma', icon: <SiFigma className="text-pink-500" /> },
       { name: 'System Analysis', icon: <span className="text-sm">🧠</span> },
       { name: 'Project Management', icon: <span className="text-sm">📋</span> },
@@ -54,7 +54,7 @@ const skillGroups: SkillGroup[] = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-40">
+    <section id="skills" className="py-20 px-6 sm:px-10 lg:px-20">
       <motion.div
         className="max-w-6xl mx-auto text-center"
         initial={{ opacity: 0, y: 30 }}
@@ -62,21 +62,30 @@ export default function Skills() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl font-bold mb-12 text-gray-900 dark:text-white">My Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-900 dark:text-white">
+          My Skills
+        </h2>
 
-        <div className="grid md:grid-cols-3 gap-10 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
           {skillGroups.map((group) => (
             <div key={group.title}>
-              <h3 className="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">{group.title}</h3>
+              <h3 className="text-xl font-semibold mb-4 text-indigo-600 dark:text-indigo-400">
+                {group.title}
+              </h3>
               <ul className="flex flex-wrap gap-3">
                 {group.items.map((skill) => (
-                  <li
+                  <motion.li
                     key={skill.name}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full border dark:border-gray-700 bg-white dark:bg-gray-800 text-sm font-medium text-gray-800 dark:text-white hover:bg-gradient-to-r from-indigo-500 to-blue-500 hover:text-white shadow-sm hover:shadow-md transition-transform transform hover:scale-105"
+                    className="flex items-center gap-2 px-4 py-2 rounded-full border dark:border-gray-700 
+                               bg-white dark:bg-gray-800 text-sm font-medium text-gray-800 dark:text-white 
+                               hover:bg-gradient-to-r from-indigo-500 to-blue-500 hover:text-white 
+                               shadow-sm hover:shadow-md transition-transform transform hover:scale-105"
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     {skill.icon}
                     <span>{skill.name}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>

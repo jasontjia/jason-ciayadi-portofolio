@@ -10,42 +10,42 @@ export default function About() {
       className="py-20 px-6 text-gray-800 dark:text-white"
     >
       <motion.div
-        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+        className="max-w-4xl mx-auto text-center"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        {/* Teks Utama */}
-        <div>
-          <h2 className="text-3xl font-bold mb-6">About Me</h2>
+        {/* Judul */}
+        <h2 className="text-3xl font-bold mb-6">Tentang Saya</h2>
 
-          <p className="mb-4 leading-relaxed"> Lulusan baru dari Jurusan Teknik Informatika Universitas Katolik De La Salle Manado (IPK 3,75) dengan minat besar di bidang pengembangan perangkat lunak dan analisis sistem. Memiliki pengalaman dalam proyek web berbasis PHP, Python, Javascript, dan MariaDB, serta terampil dalam web programming menggunakan Bootstrap, Tailwind CSS, dan Flask. Terbiasa bekerja dalam tim, memimpin proyek, dan siap berkontribusi di industri teknologi informasi.</p>
-          <a
-            href="https://linkedin.com/in/jason-christopher-ciayadi-2038542b2"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 text-blue-600 dark:text-blue-400 underline hover:opacity-80"
-          >
-            Lihat profil LinkedIn →
-          </a>
-        </div>
+        {/* Personal Branding */}
+        <p className="text-lg leading-relaxed mb-8">
+          Saya seorang <span className="font-semibold text-blue-600 dark:text-blue-400">Frontend Developer</span>{" "}
+          dengan fokus ke <span className="font-semibold">UI/UX modern</span> dan pengalaman 
+          membangun aplikasi full stack menggunakan <span className="font-semibold">React, Bootstrap, Flask, dan Tailwind CSS</span>.  
+          Passion saya adalah menciptakan tampilan yang <span className="italic">clean, responsif, dan mudah digunakan</span>.
+        </p>
 
-        {/* Pengalaman */}
-        <div>
-          <h3 className="text-xl font-semibold mb-4">Pengalaman Singkat</h3>
-          <ul className="space-y-4">
-            {[
-              'Magang Full Stack Developer di Asia Jaya Motor (Jun–Aug 2023)',
-              'Proyek Skripsi: Pengenalan Emosi melalui Suara (SVM)',
-              'Mini Project: Cuacify – Aplikasi Cuaca (React + REST API)'
-            ].map((item, idx) => (
-              <li key={idx} className="flex items-start gap-3">
-                <FaCheckCircle className="text-blue-500 mt-1" />
-                <span className="text-sm leading-relaxed">{item}</span>
-              </li>
-            ))}
-          </ul>
+
+        {/* Highlight singkat */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left max-w-3xl mx-auto">
+          {[
+            'Magang Full Stack Developer – Toko Asia Jaya Motor (2023)',
+            'Proyek Skripsi: Pengenalan Emosi via Suara (SVM)',
+            'Mini Project: Cuacify (React + REST API)'
+          ].map((item, idx) => (
+            <motion.div
+              key={idx}
+              className="flex items-start gap-3"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.2 }}
+            >
+              <FaCheckCircle className="text-blue-500 mt-1 flex-shrink-0" />
+              <span className="text-sm">{item}</span>
+            </motion.div>
+          ))}
         </div>
       </motion.div>
     </section>

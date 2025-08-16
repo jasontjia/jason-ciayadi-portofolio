@@ -19,12 +19,21 @@ export default function Hero() {
         />
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Hi, I&#39;m Jason Christopher Ciayadi 👋
+        <h1 className="text-4xl md:text-5xl font-extrabold mb-3">
+          Hi, I&#39;m{" "}
+          <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            Jason Christopher Ciayadi
+          </span>{" "}
+          👋
         </h1>
 
+        {/* Tagline */}
+        <p className="text-lg md:text-xl text-gray-200 mb-8">
+          Frontend Developer • Full Stack Developer
+        </p>
+
         {/* Tombol CTA */}
-        <div className="flex justify-center gap-4 mb-4">
+        <div className="flex justify-center gap-4 mb-6">
           <a
             href="#projects"
             className="px-6 py-2 bg-white text-blue-600 font-medium rounded shadow hover:bg-blue-100 transition"

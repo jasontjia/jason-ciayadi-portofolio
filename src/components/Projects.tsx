@@ -1,14 +1,13 @@
 'use client'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules'
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules'
 import 'swiper/css'
-import 'swiper/css/navigation'
+import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
-import 'swiper/css/effect-fade'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
-// Project Type
 type Project = {
   title: string
   description: string
@@ -17,7 +16,6 @@ type Project = {
   image: string
 }
 
-// Project Data
 const projects: Project[] = [
   {
     title: 'Cuacify',
@@ -39,48 +37,93 @@ const projects: Project[] = [
     link: '#',
     repo: 'https://github.com/jasontjia/aplikasi-pengelolaan',
     image: '/projects/barangmasuk_pemilik.png'
+  },
+  {
+    title: 'Aplikasi ReCom',
+    description: 'Aplikasi penyewaan baju berbasis web yang dibuat menggunakan Figma untuk desain antarmukanya.',
+    link: 'https://www.figma.com/design/okPLQjxUIq7Wt2m2vZPLno/PROTOTYPE-RECOM',
+    repo: '',
+    image: '/projects/desktop-2.png'
   }
 ]
 
-// Component
 export default function Projects() {
   return (
-    <section id="projects" className="py-16 px-4">
-      <div className="max-w-xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8">My Projects</h2>
+    <section id="projects" className="py-20 px-4">
+      <div className="max-w-6xl mx-auto text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl font-bold mb-14 text-gray-900 dark:text-gray-100"
+        >
+          My Projects
+        </motion.h2>
 
         <Swiper
-          modules={[Navigation, Pagination, Autoplay, EffectFade]}
-          navigation
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          effect="coverflow"
+          grabCursor
+          centeredSlides
+          slidesPerView="auto"
+          speed={800}
+          coverflowEffect={{
+            rotate: 15,
+            stretch: 0,
+            depth: 180,
+            modifier: 2,
+            slideShadows: false
+          }}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 5000 }}
-          effect="fade"
-          spaceBetween={30}
-          slidesPerView={1}
-          loop={true}
-          className="!pb-10"
+          autoplay={{ delay: 3500, disableOnInteraction: false }}
+          loop
+          className="w-full"
         >
-          {projects.map((project) => (
-            <SwiperSlide key={project.title}>
-              <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow text-left">
+          {projects.map((project, idx) => (
+            <SwiperSlide key={project.title} className="max-w-sm">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.15 }}
+                whileHover={{ scale: 1.04, boxShadow: '0 12px 30px rgba(0,0,0,0.2)' }}
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden transition-all"
+              >
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={500}
-                  height={300}
-                  className="w-full h-64 object-cover rounded mb-4"
+                  width={400}
+                  height={250}
+                  className="w-full h-56 object-cover"
                 />
-                <h3 className="text-xl font-semibold mb-2 text-center">{project.title}</h3>
-                <p className="mb-4 text-sm text-center">{project.description}</p>
-                <div className="flex gap-4 justify-center">
-                  {project.link !== '#' && (
-                    <a href={project.link} target="_blank" className="text-blue-500 hover:underline">Live Demo</a>
-                  )}
-                  {project.repo !== '#' && (
-                    <a href={project.repo} target="_blank" className="text-blue-500 hover:underline">GitHub</a>
-                  )}
+                <div className="p-5">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                    {project.description}
+                  </p>
+                  <div className="flex gap-5 justify-center text-sm font-medium">
+                    {project.link !== '#' && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                    {project.repo !== '#' && (
+                      <a
+                        href={project.repo}
+                        target="_blank"
+                        className="text-blue-600 dark:text-blue-400 hover:underline"
+                      >
+                        GitHub
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
