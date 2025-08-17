@@ -44,6 +44,13 @@ const projects: Project[] = [
     link: 'https://www.figma.com/design/okPLQjxUIq7Wt2m2vZPLno/PROTOTYPE-RECOM',
     repo: '',
     image: '/projects/Desktop-2.png'
+  },
+  {
+    title: 'Futsal Booking',
+    description: 'Aplikasi penyewaan lapangan futsal berbasis web dengan Laravel, Inertia, Tailwind, dan Vue.',
+    link: '#',
+    repo: 'https://github.com/jasontjia/futsal-booking.git',
+    image: '/projects/home.png'
   }
 ]
 
