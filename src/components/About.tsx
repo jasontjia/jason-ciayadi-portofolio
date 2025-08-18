@@ -33,7 +33,8 @@ export default function About() {
           {[
             'Magang Full Stack Developer – Toko Asia Jaya Motor (2023)',
             'Proyek Skripsi: Pengenalan Emosi via Suara (SVM)',
-            'Mini Project: Cuacify (React + REST API)'
+            'Mini Project: Cuacify (React + REST API)',
+            'Mini Project: Futsal Booking (Laravel + Inertia + Tailwind + Vue)'
           ].map((item, idx) => (
             <motion.div
               key={idx}
