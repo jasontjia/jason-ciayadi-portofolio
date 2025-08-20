@@ -51,6 +51,13 @@ const projects: Project[] = [
     link: '#',
     repo: 'https://github.com/jasontjia/futsal-booking.git',
     image: '/projects/home.png'
+  },
+  {
+    title: 'Aplikasi Rekomendasi Online Shops',
+    description: 'Aplikasi berbasis web dengan menggunakan PHP dan metode AHP dalam menentukan keputusan yang diperoleh.',
+    link: '#',
+    repo: 'https://github.com/jasontjia/SPK-OnlineShops.git',
+    image: '/projects/rekom-shops.png'
   }
 ]
 
