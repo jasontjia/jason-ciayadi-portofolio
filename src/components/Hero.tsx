@@ -41,7 +41,7 @@ export default function Hero() {
             Lihat Proyek
           </a>
           <a
-            href="/CV-Jason Christopher Ciayadi.pdf"
+            href="/CV_JasonChristopherCiayadi.pdf"
             download
             className="px-6 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-blue-600 transition"
           >
