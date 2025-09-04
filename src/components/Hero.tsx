@@ -45,7 +45,7 @@ export default function Hero() {
             download
             className="px-6 py-2 border border-white text-white font-medium rounded hover:bg-white hover:text-blue-600 transition"
           >
-            Download CV
+            CV Terbaru
           </a>
         </div>
 
