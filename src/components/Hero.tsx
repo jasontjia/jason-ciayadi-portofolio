@@ -81,7 +81,7 @@ export default function Hero() {
             Halo, saya <span className="text-blue-400">Jason Christopher Ciayadi</span>
           </h1>
           <p className="text-sm sm:text-base md:text-xl text-gray-200 mb-3 sm:mb-4">
-            Frontend Developer · Full Stack Enthusiast  
+            Frontend Developer · Full Stack Developer  
           </p>
           <p className="text-xs sm:text-sm md:text-lg text-gray-300 mb-4 sm:mb-6 md:mb-8 max-w-full sm:max-w-md md:max-w-lg mx-auto md:mx-0">
             Saya memiliki passion membangun aplikasi web yang 
