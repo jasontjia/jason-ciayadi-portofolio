@@ -15,19 +15,19 @@ export default function About() {
     {
       title: 'Proyek Skripsi',
       place: 'Aplikasi Pengenalan Emosi via Suara (SVM)',
-      year: '2023',
+      year: '2024',
       icon: <FaGraduationCap className="text-yellow-400 text-xl" />,
     },
     {
       title: 'Mini Project',
       place: 'Cuacify – Aplikasi Cuaca (React + REST API)',
-      year: '2024',
+      year: '2025',
       icon: <FaProjectDiagram className="text-green-400 text-xl" />,
     },
     {
       title: 'Mini Project',
       place: 'Futsal Booking (Laravel + Inertia + Vue + Tailwind)',
-      year: '2024',
+      year: '2025',
       icon: <FaLaptopCode className="text-pink-400 text-xl" />,
     },
   ]
@@ -55,8 +55,9 @@ export default function About() {
           Berpengalaman menggunakan{' '}
           <span className="font-semibold text-cyan-400">React</span>,{' '}
           <span className="font-semibold text-green-400">Vue</span>,{' '}
-          <span className="font-semibold text-red-400">Laravel</span>, dan{' '}
-          <span className="font-semibold text-pink-400">TailwindCSS</span> untuk membangun
+          <span className="font-semibold text-red-400">Laravel</span>,{' '}
+          <span className="font-semibold text-pink-400">TailwindCSS</span>, dan{' '} 
+          <span className="font-semibold text-red-600">Bootstrap</span>{' '}untuk membangun
           aplikasi web sederhana namun <span className="italic text-yellow-300">impactful</span>.
         </p>
 
