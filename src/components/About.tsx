@@ -30,6 +30,13 @@ export default function About() {
       year: '2025',
       icon: <FaLaptopCode className="text-pink-400 text-xl" />,
     },
+
+    {
+      title: 'Mini Project',
+      place: 'MJ Laundry App (Next.js + Tailwind + MySQL + Prisma)',
+      year: '2025',
+      icon: <MdWork className="text-pink-400 text-xl" />,
+    },
   ]
 
   return (

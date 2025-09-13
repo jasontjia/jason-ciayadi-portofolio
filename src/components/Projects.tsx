@@ -43,9 +43,27 @@ const projects: Project[] = [
       { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
     ],
   },
+
+  {
+    title: 'Aplikasi POS MJ Laundry',
+    category: 'Personal Project (2025)',
+    description:
+      'Aplikasi Point of Sales (POS) untuk MJ Laundry dengan fitur manajemen transaksi, filter, sorting, pagination, dan live update real-time menggunakan Prisma.',
+    link: '#',
+    repo: 'https://github.com/jasontjia/MJ_Laundry-App.git', // ganti sesuai repo lo
+    image: '/projects/orders.png', // taruh screenshot lo di public/projects
+    tech: [
+      { name: 'Next.js', icon: <FaReact className="text-gray-200" /> },
+      { name: 'TailwindCSS', icon: <SiTailwindcss className="text-teal-400" /> },
+      { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
+      { name: 'Prisma', icon: <SiVercel className="text-white" /> }, // kalau mau pake ikon Prisma bisa pake svg custom
+      { name: 'GitHub', icon: <FaGithub className="text-gray-200" /> },
+    ],
+  },
+
   {
     title: 'Aplikasi Pengenalan Emosi via Suara',
-    category: 'Skripsi (2023)',
+    category: 'Skripsi (2024)',
     description:
       'Aplikasi deteksi emosi melalui suara menggunakan metode SVM. Hasil penelitian menunjukkan akurasi 92%.',
     link: '#',
@@ -60,7 +78,7 @@ const projects: Project[] = [
   },
   {
     title: 'Futsal Booking App',
-    category: 'Mini Project (2023)',
+    category: 'Mini Project (2025)',
     description:
       'Aplikasi penyewaan lapangan futsal berbasis web dengan sistem booking online. Dibangun dengan Laravel, Inertia.js, Vue.js, dan TailwindCSS.',
     link: '#',
@@ -76,7 +94,7 @@ const projects: Project[] = [
   },
   {
     title: 'Cuacify',
-    category: 'Mini Project (2023)',
+    category: 'Mini Project (2025)',
     description:
       'Aplikasi cuaca modern menggunakan OpenWeather API. Dibangun dengan React.js, TailwindCSS, Vite.js, dan dideploy menggunakan Vercel.',
     link: 'https://cuacify-vite.vercel.app/',
