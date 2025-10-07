@@ -19,6 +19,7 @@ import { JSX } from 'react'
 type Project = {
   title: string
   category: string
+  role: string
   description: string
   link: string
   repo: string
@@ -30,6 +31,7 @@ const projects: Project[] = [
   {
     title: 'Website Toko Asia Jaya Motor',
     category: 'Magang (2023)',
+    role: 'Fullstack Developer',
     description:
       'Sistem CRUD produk & transaksi untuk toko sparepart motor. Dibangun dengan PHP, Bootstrap, JavaScript, dan basis data MySQL/MariaDB.',
     link: '#',
@@ -43,27 +45,27 @@ const projects: Project[] = [
       { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
     ],
   },
-
   {
     title: 'Aplikasi POS MJ Laundry',
     category: 'Personal Project (2025)',
+    role: 'Fullstack Developer',
     description:
       'Aplikasi Point of Sales (POS) untuk MJ Laundry dengan fitur manajemen transaksi, filter, sorting, pagination, dan live update real-time menggunakan Prisma.',
     link: '#',
-    repo: 'https://github.com/jasontjia/MJ_Laundry-App.git', // ganti sesuai repo lo
-    image: '/projects/orders.png', // taruh screenshot lo di public/projects
+    repo: 'https://github.com/jasontjia/MJ_Laundry-App.git',
+    image: '/projects/orders.png',
     tech: [
       { name: 'Next.js', icon: <FaReact className="text-gray-200" /> },
       { name: 'TailwindCSS', icon: <SiTailwindcss className="text-teal-400" /> },
       { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
-      { name: 'Prisma', icon: <SiVercel className="text-white" /> }, // kalau mau pake ikon Prisma bisa pake svg custom
+      { name: 'Prisma', icon: <SiVercel className="text-white" /> },
       { name: 'GitHub', icon: <FaGithub className="text-gray-200" /> },
     ],
   },
-
   {
     title: 'Aplikasi Pengenalan Emosi via Suara',
     category: 'Skripsi (2024)',
+    role: 'AI Engineer',
     description:
       'Aplikasi deteksi emosi melalui suara menggunakan metode SVM. Hasil penelitian menunjukkan akurasi 92%.',
     link: '#',
@@ -79,6 +81,7 @@ const projects: Project[] = [
   {
     title: 'Futsal Booking App',
     category: 'Mini Project (2025)',
+    role: 'Fullstack Developer',
     description:
       'Aplikasi penyewaan lapangan futsal berbasis web dengan sistem booking online. Dibangun dengan Laravel, Inertia.js, Vue.js, dan TailwindCSS.',
     link: '#',
@@ -95,6 +98,7 @@ const projects: Project[] = [
   {
     title: 'Cuacify',
     category: 'Mini Project (2025)',
+    role: 'Frontend Developer',
     description:
       'Aplikasi cuaca modern menggunakan OpenWeather API. Dibangun dengan React.js, TailwindCSS, Vite.js, dan dideploy menggunakan Vercel.',
     link: 'https://cuacify-vite.vercel.app/',
@@ -111,6 +115,7 @@ const projects: Project[] = [
   {
     title: 'Aplikasi Rekomendasi Online Shops',
     category: 'Mini Project (2023)',
+    role: 'Frontend Developer',
     description:
       'Aplikasi pendukung keputusan berbasis web menggunakan metode AHP untuk menentukan online shop terbaik.',
     link: '#',
@@ -120,11 +125,14 @@ const projects: Project[] = [
       { name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
       { name: 'TailwindCSS', icon: <SiTailwindcss className="text-teal-400" /> },
       { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
+      { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
+      { name: 'PHP', icon: <FaPhp className="text-indigo-600" /> },
     ],
   },
   {
     title: 'Aplikasi ReCom',
     category: 'UI/UX Project',
+    role: 'UI/UX Designer',
     description:
       'Desain antarmuka aplikasi penyewaan baju berbasis web. Prototype dibuat dengan Figma.',
     link: 'https://www.figma.com/design/okPLQjxUIq7Wt2m2vZPLno/PROTOTYPE-RECOM',
@@ -135,6 +143,21 @@ const projects: Project[] = [
 ]
 
 export default function Projects() {
+  const getRoleColor = (role: string) => {
+    switch (role) {
+      case 'Frontend Developer':
+        return 'text-green-400'
+      case 'Fullstack Developer':
+        return 'text-orange-400'
+      case 'UI/UX Designer':
+        return 'text-pink-400'
+      case 'AI Engineer':
+        return 'text-yellow-400'
+      default:
+        return 'text-cyan-300'
+    }
+  }
+
   return (
     <section id="projects" className="py-20 px-4 bg-gradient-to-br from-gray-950 via-blue-950 to-cyan-900">
       <div className="max-w-6xl mx-auto text-center">
@@ -189,7 +212,10 @@ export default function Projects() {
                   <h3 className="text-lg font-semibold text-white mb-1">
                     {project.title}
                   </h3>
-                  <p className="text-xs text-blue-400 mb-3">{project.category}</p>
+                  <p className="text-xs text-blue-400 mb-1">{project.category}</p>
+                  <p className={`text-sm font-medium mb-3 ${getRoleColor(project.role)}`}>
+                    {project.role}
+                  </p>
                   <p className="text-sm text-gray-400 mb-4 line-clamp-3">
                     {project.description}
                   </p>
@@ -219,7 +245,7 @@ export default function Projects() {
                         🔗 Live Demo
                       </a>
                     )}
-                    {project.repo !== '#' && (
+                    {project.repo && project.repo !== '#' && (
                       <a
                         href={project.repo}
                         target="_blank"
