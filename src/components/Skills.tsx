@@ -20,6 +20,7 @@ const skillGroups = [
       { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
       { name: 'React.js', icon: <FaReact className="text-cyan-400" /> },
       { name: 'Vue.js', icon: <SiVuedotjs className="text-green-500" /> },
+      { name: 'Next.js', icon: <FaReact className="text-gray-200" /> },
       { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
       { name: 'Bootstrap', icon: <SiBootstrap className="text-purple-600" /> },
     ],

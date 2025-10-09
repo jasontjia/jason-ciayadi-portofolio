@@ -30,7 +30,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: 'Website Toko Asia Jaya Motor',
-    category: 'Magang (2023)',
+    category: 'Internship (2023)',
     role: 'Fullstack Developer',
     description:
       'Sistem CRUD produk & transaksi untuk toko sparepart motor. Dibangun dengan PHP, Bootstrap, JavaScript, dan basis data MySQL/MariaDB.',
@@ -47,7 +47,7 @@ const projects: Project[] = [
   },
   {
     title: 'Aplikasi POS MJ Laundry',
-    category: 'Personal Project (2025)',
+    category: 'Project (2025)',
     role: 'Fullstack Developer',
     description:
       'Aplikasi Point of Sales (POS) untuk MJ Laundry dengan fitur manajemen transaksi, filter, sorting, pagination, dan live update real-time menggunakan Prisma.',
@@ -80,7 +80,7 @@ const projects: Project[] = [
   },
   {
     title: 'Futsal Booking App',
-    category: 'Mini Project (2025)',
+    category: 'Project (2025)',
     role: 'Fullstack Developer',
     description:
       'Aplikasi penyewaan lapangan futsal berbasis web dengan sistem booking online. Dibangun dengan Laravel, Inertia.js, Vue.js, dan TailwindCSS.',
@@ -97,7 +97,7 @@ const projects: Project[] = [
   },
   {
     title: 'Cuacify',
-    category: 'Mini Project (2025)',
+    category: 'Project (2025)',
     role: 'Frontend Developer',
     description:
       'Aplikasi cuaca modern menggunakan OpenWeather API. Dibangun dengan React.js, TailwindCSS, Vite.js, dan dideploy menggunakan Vercel.',
@@ -114,7 +114,7 @@ const projects: Project[] = [
   },
   {
     title: 'Aplikasi Rekomendasi Online Shops',
-    category: 'Mini Project (2023)',
+    category: 'Project (2023)',
     role: 'Frontend Developer',
     description:
       'Aplikasi pendukung keputusan berbasis web menggunakan metode AHP untuk menentukan online shop terbaik.',
@@ -131,7 +131,7 @@ const projects: Project[] = [
   },
   {
     title: 'Aplikasi ReCom',
-    category: 'UI/UX Project',
+    category: 'UI/UX Project (2023)',
     role: 'UI/UX Designer',
     description:
       'Desain antarmuka aplikasi penyewaan baju berbasis web. Prototype dibuat dengan Figma.',
