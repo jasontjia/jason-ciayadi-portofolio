@@ -11,8 +11,8 @@ import { motion } from 'framer-motion'
 // icons
 import { FaReact, FaPhp, FaLaravel, FaPython, FaJs, FaHtml5, FaGithub } from 'react-icons/fa'
 import { 
-  SiTailwindcss, SiFlask, SiMysql, SiMariadb, SiVuedotjs, SiFigma, 
-  SiBootstrap, SiVite, SiVercel, SiInertia 
+  SiTailwindcss, SiFlask, SiMysql, SiMariadb, SiVuedotjs, SiFigma, SiTypescript,
+  SiBootstrap, SiVite, SiVercel, SiInertia, SiDocker
 } from 'react-icons/si'
 import { JSX } from 'react'
 
@@ -56,10 +56,12 @@ const projects: Project[] = [
     image: '/projects/orders.png',
     tech: [
       { name: 'Next.js', icon: <FaReact className="text-gray-200" /> },
+      { name: 'TypeScript', icon: <SiTypescript className="text-blue-500" /> },
       { name: 'TailwindCSS', icon: <SiTailwindcss className="text-teal-400" /> },
       { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
       { name: 'Prisma', icon: <SiVercel className="text-white" /> },
       { name: 'GitHub', icon: <FaGithub className="text-gray-200" /> },
+      { name: 'Docker', icon: <SiDocker className="text-blue-400" /> },
     ],
   },
   {

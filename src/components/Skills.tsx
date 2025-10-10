@@ -2,14 +2,19 @@
 
 import { motion } from 'framer-motion'
 import {
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp, FaPython, FaGitAlt,
+  FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp, FaPython, FaGitAlt, FaNetworkWired,
 } from 'react-icons/fa'
 import {
-  SiTailwindcss, SiBootstrap, SiFlask, SiMysql, SiMariadb, SiVuedotjs, SiLaravel, SiFigma,
+  SiTailwindcss, SiBootstrap, SiFlask, SiMysql, SiMariadb, SiVuedotjs, SiLaravel, SiFigma, SiVercel, SiGit, SiNextdotjs, SiCodewars,
 } from 'react-icons/si'
 import { MdVerified } from 'react-icons/md'
 import { GiTeamIdea, GiThink } from 'react-icons/gi'
-import { FaUsers, FaComments } from 'react-icons/fa'
+import { FaUsers, FaComments, FaCode } from 'react-icons/fa'
+import { SiDocker, SiTypescript } from 'react-icons/si'
+import { BsDiagram3 } from 'react-icons/bs'
+import { HiOutlineClipboardList } from 'react-icons/hi'
+import { MdOutlineDesignServices } from 'react-icons/md'
+
 
 const skillGroups = [
   {
@@ -17,10 +22,9 @@ const skillGroups = [
     skills: [
       { name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
       { name: 'CSS', icon: <FaCss3Alt className="text-blue-500" /> },
-      { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
       { name: 'React.js', icon: <FaReact className="text-cyan-400" /> },
       { name: 'Vue.js', icon: <SiVuedotjs className="text-green-500" /> },
-      { name: 'Next.js', icon: <FaReact className="text-gray-200" /> },
+      { name: 'Next.js', icon: <SiNextdotjs className="text-white" /> },
       { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
       { name: 'Bootstrap', icon: <SiBootstrap className="text-purple-600" /> },
     ],
@@ -29,9 +33,12 @@ const skillGroups = [
     title: 'Backend',
     skills: [
       { name: 'PHP', icon: <FaPhp className="text-indigo-600" /> },
+      { name: 'Laravel', icon: <SiLaravel className="text-red-500" /> },
+      { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
+      { name: 'TypeScript', icon: <SiTypescript className="text-blue-500" /> },
       { name: 'Python', icon: <FaPython className="text-blue-400" /> },
       { name: 'Flask', icon: <SiFlask className="text-gray-500" /> },
-      { name: 'Laravel', icon: <SiLaravel className="text-red-500" /> },
+      { name: 'REST API', icon: <FaNetworkWired className="text-gray-400" /> },
       { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
       { name: 'MariaDB', icon: <SiMariadb className="text-blue-700" /> },
     ],
@@ -39,17 +46,27 @@ const skillGroups = [
   {
     title: 'Tools & Design',
     skills: [
-      { name: 'Git & GitHub', icon: <FaGitAlt className="text-black dark:text-white" /> },
+      { name: 'VS Code', icon: <SiCodewars className="text-blue-500" /> },
+      { name: 'Git', icon: <SiGit className="text-orange-500" /> },
+      { name: 'Github', icon: <FaGitAlt className="text-black dark:text-white" /> },
       { name: 'Figma', icon: <SiFigma className="text-pink-500" /> },
+      { name: 'Vercel', icon: <SiVercel className="text-white" /> },
+      { name: 'Docker', icon: <SiDocker className="text-blue-400" /> },
     ],
   },
 ]
 
 const softSkills = [
+  { name: 'Web Programming', icon: <FaCode className="text-green-500" /> },
   { name: 'Teamwork', icon: <FaUsers className="text-blue-400" /> },
   { name: 'Communication', icon: <FaComments className="text-green-400" /> },
   { name: 'Leadership', icon: <GiTeamIdea className="text-yellow-400" /> },
   { name: 'Problem Solving', icon: <GiThink className="text-purple-400" /> },
+  { name: 'System Analysis', icon: <BsDiagram3 className="text-cyan-400" /> },
+  { name: 'Information Systems', icon: <BsDiagram3 className="text-blue-400" /> },
+  { name: 'Project Management', icon: <HiOutlineClipboardList className="text-yellow-400" /> },
+  { name: 'Decision Making', icon: <HiOutlineClipboardList className="text-green-400" /> },
+  { name: 'Desain Antarmuka', icon: <MdOutlineDesignServices className="text-pink-500" /> },
 ]
 
 const certifications = [
