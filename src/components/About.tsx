@@ -60,8 +60,9 @@ export default function About() {
           <span className="font-semibold text-blue-400">Frontend</span> &{' '}
           <span className="font-semibold text-purple-400">Fullstack Development</span>.  
           Berpengalaman menggunakan{' '}
-          <span className="font-semibold text-cyan-400">React</span>,{' '}
-          <span className="font-semibold text-green-400">Vue</span>,{' '}
+          <span className="font-semibold text-cyan-400">React.js</span>,{' '}
+          <span className="font-semibold text-green-400">Vue.js</span>,{' '}
+          <span className="font-semibold text-gray-300">Next.js</span>,{' '}
           <span className="font-semibold text-red-400">Laravel</span>,{' '}
           <span className="font-semibold text-pink-400">TailwindCSS</span>, dan{' '} 
           <span className="font-semibold text-red-600">Bootstrap</span>{' '}untuk membangun
