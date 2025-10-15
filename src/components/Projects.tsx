@@ -7,7 +7,7 @@ import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-
+import { HiOutlineClipboardList } from 'react-icons/hi'
 // icons
 import { FaReact, FaPhp, FaLaravel, FaPython, FaJs, FaHtml5, FaGithub } from 'react-icons/fa'
 import { 
@@ -31,7 +31,7 @@ const projects: Project[] = [
   {
     title: 'Website Toko Asia Jaya Motor',
     category: 'Internship (2023)',
-    role: 'Fullstack Developer',
+    role: 'Full Stack Developer',
     description:
       'Sistem CRUD produk & transaksi untuk toko sparepart motor. Dibangun dengan PHP, Bootstrap, JavaScript, dan basis data MySQL/MariaDB.',
     link: '#',
@@ -43,12 +43,13 @@ const projects: Project[] = [
       { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
       { name: 'MariaDB', icon: <SiMariadb className="text-blue-700" /> },
       { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
+      { name: 'RAD', icon: <HiOutlineClipboardList className="text-yellow-400" /> },
     ],
   },
   {
     title: 'Aplikasi POS MJ Laundry',
     category: 'Project (2025)',
-    role: 'Fullstack Developer',
+    role: 'Full Stack Developer',
     description:
       'Aplikasi Point of Sales (POS) untuk MJ Laundry dengan fitur manajemen transaksi, filter, sorting, pagination, dan live update real-time menggunakan Prisma.',
     link: '#',
@@ -65,11 +66,11 @@ const projects: Project[] = [
     ],
   },
   {
-    title: 'Aplikasi Pengenalan Emosi via Suara',
+    title: 'Aplikasi Pengenalan Emosi Manusia melalui Suara',
     category: 'Skripsi (2024)',
     role: 'AI Engineer',
     description:
-      'Aplikasi deteksi emosi melalui suara menggunakan metode SVM. Hasil penelitian menunjukkan akurasi 92%.',
+      'Aplikasi deteksi emosi manusia melalui suara menggunakan metode SVM. Hasil penelitian menunjukkan akurasi 92%.',
     link: '#',
     repo: 'https://github.com/jasontjia/emodetect-svm',
     image: '/projects/Form-SingleAudio.png',
@@ -78,12 +79,13 @@ const projects: Project[] = [
       { name: 'Flask', icon: <SiFlask className="text-gray-500" /> },
       { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
       { name: 'Bootstrap', icon: <SiBootstrap className="text-purple-600" /> },
+      { name: 'RAD', icon: <HiOutlineClipboardList className="text-yellow-400" /> },
     ],
   },
   {
     title: 'Futsal Booking App',
     category: 'Project (2025)',
-    role: 'Fullstack Developer',
+    role: 'Full Stack Developer',
     description:
       'Aplikasi penyewaan lapangan futsal berbasis web dengan sistem booking online. Dibangun dengan Laravel, Inertia.js, Vue.js, dan TailwindCSS.',
     link: '#',
@@ -129,6 +131,7 @@ const projects: Project[] = [
       { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
       { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
       { name: 'PHP', icon: <FaPhp className="text-indigo-600" /> },
+      { name: 'Agile', icon: <HiOutlineClipboardList className="text-green-400" /> },
     ],
   },
   {
