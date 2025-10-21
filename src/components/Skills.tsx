@@ -77,12 +77,12 @@ const softSkills = [
 ]
 
 const certifications = [
-  { title: 'Teachcast Certificate of Completion Level 4 (2021)', image: '/certificates/Sertifikat-Teachcast-Level4.png' },
-  { title: 'Data Analytics in Practice (Binus Online Learning, 2023)', image: '/certificates/Jason Ciayadi - 11 March 2023_page-0001.jpg' },
-  { title: 'Intro to Data Analytics (RevoU, 2025)', image: '/certificates/DAMC Sertifikat.jpg' },
-  { title: 'Intro to Software Engineering (RevoU, 2025)', image: '/certificates/SEFC Sertifikat.jpeg' },
-  { title: 'Humanizing Artificial Intelligence – ITB (2025)', image: '/certificates/HumanizingAI_Sertifikat.jpg' },
-  { title: 'Bootcamp Kilat Full Stack Developer – harisenin.com (2025)', image: '/certificates/Sertifikat - Jason Christopher Ciayadi-1.png' },
+  { title: 'Teachcast Certificate of Completion Level 4 (Mei - 2021)', image: '/certificates/Sertifikat-Teachcast-Level4.png' },
+  { title: 'Data Analytics in Practice - Binus Online Learning (Maret - 2023)', image: '/certificates/Jason Ciayadi - 11 March 2023_page-0001.jpg' },
+  { title: 'Intro to Data Analytics - RevoU (Mei - 2025)', image: '/certificates/DAMC Sertifikat.jpg' },
+  { title: 'Humanizing Artificial Intelligence – ITB (Mei - 2025)', image: '/certificates/HumanizingAI_Sertifikat.jpg' },
+  { title: 'Intro to Software Engineering - RevoU (Juni - 2025)', image: '/certificates/SEFC Sertifikat.jpeg' },
+  { title: 'Bootcamp Kilat Full Stack Developer – harisenin.com (Oktober - 2025)', image: '/certificates/Sertifikat - Jason Christopher Ciayadi-1.png' },
 ]
 
 export default function Skills() {
@@ -101,7 +101,6 @@ export default function Skills() {
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
           Skills & Certifications
         </h2>
-
         {/* Hard Skills */}
         <div className="grid md:grid-cols-4 gap-10 mb-16">
           {skillGroups.map((group, idx) => (
@@ -124,7 +123,6 @@ export default function Skills() {
             </div>
           ))}
         </div>
-
         {/* Soft Skills */}
         <div className="mb-16">
           <h3 className="text-xl font-semibold text-blue-400 mb-6 text-center md:text-left">
@@ -143,37 +141,47 @@ export default function Skills() {
             ))}
           </div>
         </div>
-
         {/* Certifications */}
         <div className="max-w-3xl mx-auto">
           <h3 className="text-xl font-semibold text-blue-400 mb-4 text-center md:text-left">
             Sertifikasi & Pelatihan
           </h3>
           <ul className="space-y-3">
-            {certifications.map((cert, idx) => (
-              <motion.li
-                key={idx}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="flex items-center justify-between gap-2"
-              >
-                <div className="flex items-center gap-2">
-                  <MdVerified className="text-green-400" />
-                  <span>{cert.title}</span>
-                </div>
-                <button
-                  onClick={() => setSelectedCert(cert)}
-                  className="text-blue-400 hover:text-blue-300 transition"
-                  aria-label={`Lihat sertifikat ${cert.title}`}
+            {certifications.map((cert, idx) => {
+              // Pisahkan teks utama dan tanggal (dalam tanda kurung)
+              const match = cert.title.match(/^(.*?)\s*\((.*?)\)$/)
+              const titleText = match ? match[1] : cert.title
+              const dateText = match ? match[2] : null
+
+              return (
+                <motion.li
+                  key={idx}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  className="flex items-center justify-between gap-2"
                 >
-                  <HiOutlineEye className="text-xl" />
-                </button>
-              </motion.li>
-            ))}
+                  <div className="flex items-center gap-2">
+                    <MdVerified className="text-green-400" />
+                    <span>
+                      {titleText}{' '}
+                      {dateText && (
+                        <span className="text-blue-400">({dateText})</span>
+                      )}
+                    </span>
+                  </div>
+                  <button
+                    onClick={() => setSelectedCert(cert)}
+                    className="text-blue-400 hover:text-blue-300 transition"
+                    aria-label={`Lihat sertifikat ${cert.title}`}
+                  >
+                    <HiOutlineEye className="text-xl" />
+                  </button>
+                </motion.li>
+              )
+            })}
           </ul>
         </div>
-
         {/* Modal Sertifikat */}
         {selectedCert && (
           <div
