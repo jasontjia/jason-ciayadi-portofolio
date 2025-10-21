@@ -77,12 +77,12 @@ const softSkills = [
 ]
 
 const certifications = [
-  { title: 'Internet of Things – Fakultas Teknik (2020)', image: '/certificates/E-SERTIFIKAT IOT KULIAH UMUM FAKULTAS TEKNIK_page-0001.jpg' },
   { title: 'Teachcast Certificate of Completion Level 4 (2021)', image: '/certificates/Sertifikat-Teachcast-Level4.png' },
   { title: 'Data Analytics in Practice (Binus Online Learning, 2023)', image: '/certificates/Jason Ciayadi - 11 March 2023_page-0001.jpg' },
   { title: 'Intro to Data Analytics (RevoU, 2025)', image: '/certificates/DAMC Sertifikat.jpg' },
   { title: 'Intro to Software Engineering (RevoU, 2025)', image: '/certificates/SEFC Sertifikat.jpeg' },
   { title: 'Humanizing Artificial Intelligence – ITB (2025)', image: '/certificates/HumanizingAI_Sertifikat.jpg' },
+  { title: 'Bootcamp Kilat Full Stack Developer – harisenin.com (2025)', image: '/certificates/Sertifikat - Jason Christopher Ciayadi-1.png' },
 ]
 
 export default function Skills() {
