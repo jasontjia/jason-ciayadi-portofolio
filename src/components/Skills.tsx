@@ -3,214 +3,180 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import {
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaPhp, FaPython, FaGitAlt, FaNetworkWired,
-  FaUsers, FaComments, FaCode,
-} from 'react-icons/fa'
-import {
-  SiTailwindcss, SiBootstrap, SiFlask, SiMysql, SiMariadb, SiVuedotjs, SiLaravel, SiFigma, SiVercel, SiGit, SiNextdotjs, SiCodewars, SiDocker, SiTypescript,
-} from 'react-icons/si'
-import { MdVerified, MdOutlineDesignServices } from 'react-icons/md'
-import { GiTeamIdea, GiThink } from 'react-icons/gi'
-import { BsDiagram3 } from 'react-icons/bs'
-import { HiOutlineClipboardList, HiOutlineEye } from 'react-icons/hi'
+import { MdVerified } from 'react-icons/md'
+import { HiOutlineEye } from 'react-icons/hi'
+import { FaFileAlt, FaHtml5, FaCss3Alt, FaJs, FaPhp, FaPython, FaGitAlt, FaGithub, FaDatabase, FaCode } from 'react-icons/fa'
+import { SiTailwindcss, SiBootstrap, SiFlask, SiMysql, SiMariadb, SiFigma } from 'react-icons/si'
 
 const skillGroups = [
   {
     title: 'Frontend',
     skills: [
-      { name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
-      { name: 'CSS', icon: <FaCss3Alt className="text-blue-500" /> },
-      { name: 'React.js', icon: <FaReact className="text-cyan-400" /> },
-      { name: 'Vue.js', icon: <SiVuedotjs className="text-green-500" /> },
-      { name: 'Next.js', icon: <SiNextdotjs className="text-white" /> },
-      { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
-      { name: 'Bootstrap', icon: <SiBootstrap className="text-purple-600" /> },
+      { name: 'HTML', icon: <FaHtml5 className="text-blue-300" /> },
+      { name: 'CSS', icon: <FaCss3Alt className="text-blue-300" /> },
+      { name: 'TailwindCSS', icon: <SiTailwindcss className="text-blue-300" /> },
+      { name: 'Bootstrap', icon: <SiBootstrap className="text-blue-300" /> },
+      { name: 'ASP.Net', icon: <FaCode className="text-blue-300" /> },
     ],
   },
   {
-    title: 'Backend',
+    title: 'Backend & Business App',
     skills: [
-      { name: 'PHP', icon: <FaPhp className="text-indigo-600" /> },
-      { name: 'Laravel', icon: <SiLaravel className="text-red-500" /> },
-      { name: 'JavaScript', icon: <FaJs className="text-yellow-400" /> },
-      { name: 'TypeScript', icon: <SiTypescript className="text-blue-500" /> },
-      { name: 'Python', icon: <FaPython className="text-blue-400" /> },
-      { name: 'Flask', icon: <SiFlask className="text-gray-500" /> },
-      { name: 'REST API', icon: <FaNetworkWired className="text-gray-400" /> },
-      { name: 'MySQL', icon: <SiMysql className="text-blue-600" /> },
-      { name: 'MariaDB', icon: <SiMariadb className="text-blue-700" /> },
+      { name: 'PHP', icon: <FaPhp className="text-blue-300" /> },
+      { name: 'JavaScript', icon: <FaJs className="text-blue-300" /> },
+      { name: 'Python', icon: <FaPython className="text-blue-300" /> },
+      { name: 'Flask', icon: <SiFlask className="text-blue-300" /> },
+      { name: 'C#', icon: <FaCode className="text-blue-300" /> },
+      { name: 'Visual Basic', icon: <FaCode className="text-blue-300" /> },
+    ],
+  },
+  {
+    title: 'Database',
+    skills: [
+      { name: 'MS SQL Server', icon: <FaDatabase className="text-blue-300" /> },
+      { name: 'MySQL', icon: <SiMysql className="text-blue-300" /> },
+      { name: 'MariaDB', icon: <SiMariadb className="text-blue-300" /> },
     ],
   },
   {
     title: 'Tools & Design',
     skills: [
-      { name: 'VS Code', icon: <SiCodewars className="text-blue-500" /> },
-      { name: 'Git', icon: <SiGit className="text-orange-500" /> },
-      { name: 'Github', icon: <FaGitAlt className="text-black dark:text-white" /> },
-      { name: 'Figma', icon: <SiFigma className="text-pink-500" /> },
-      { name: 'Vercel', icon: <SiVercel className="text-white" /> },
-      { name: 'Docker', icon: <SiDocker className="text-blue-400" /> },
-    ],
-  },
-  {
-    title: 'Metodologi',
-    skills: [
-      { name: 'Agile', icon: <HiOutlineClipboardList className="text-green-400" /> },
-      { name: 'RAD', icon: <HiOutlineClipboardList className="text-yellow-400" /> },
+      { name: 'VS Code', icon: <FaCode className="text-blue-300" /> },
+      { name: 'Microsoft RDLC', icon: <FaFileAlt className="text-blue-300" /> },
+      { name: 'Git', icon: <FaGitAlt className="text-blue-300" /> },
+      { name: 'GitHub', icon: <FaGithub className="text-blue-300" /> },
+      { name: 'Figma', icon: <SiFigma className="text-blue-300" /> },
     ],
   },
 ]
 
-const softSkills = [
-  { name: 'Web Programming', icon: <FaCode className="text-green-500" /> },
-  { name: 'Teamwork', icon: <FaUsers className="text-blue-400" /> },
-  { name: 'Communication', icon: <FaComments className="text-green-400" /> },
-  { name: 'Leadership', icon: <GiTeamIdea className="text-yellow-400" /> },
-  { name: 'Problem Solving', icon: <GiThink className="text-purple-400" /> },
-  { name: 'System Analysis', icon: <BsDiagram3 className="text-cyan-400" /> },
-  { name: 'Analytical Thinking', icon: <GiThink className="text-blue-500" /> },
-  { name: 'Information Systems', icon: <BsDiagram3 className="text-blue-400" /> },
-  { name: 'Project Management', icon: <HiOutlineClipboardList className="text-yellow-400" /> },
-  { name: 'Decision Making', icon: <HiOutlineClipboardList className="text-green-400" /> },
-  { name: 'Desain Antarmuka', icon: <MdOutlineDesignServices className="text-pink-500" /> },
-]
+const hardSkills = ['Web Programming', 'Analisis Sistem', 'Manajemen Proyek', 'Sistem Informasi', 'Desain Antarmuka']
+const softSkills = ['Kepemimpinan', 'Kolaborasi', 'Komunikasi', 'Problem Solving', 'Pengambilan Keputusan']
 
 const certifications = [
-  { title: 'Teachcast Certificate of Completion Level 4 (Mei - 2021)', image: '/certificates/Sertifikat-Teachcast-Level4.png' },
-  { title: 'Data Analytics in Practice - Binus Online Learning (Maret - 2023)', image: '/certificates/Jason Ciayadi - 11 March 2023_page-0001.jpg' },
-  { title: 'Intro to Data Analytics - RevoU (Mei - 2025)', image: '/certificates/DAMC Sertifikat.jpg' },
-  { title: 'Humanizing Artificial Intelligence – ITB (Mei - 2025)', image: '/certificates/HumanizingAI_Sertifikat.jpg' },
-  { title: 'Intro to Software Engineering - RevoU (Juni - 2025)', image: '/certificates/SEFC Sertifikat.jpeg' },
-  { title: 'Bootcamp Kilat Full Stack Developer – harisenin.com (Oktober - 2025)', image: '/certificates/Sertifikat - Jason Christopher Ciayadi-1.png' },
+  { title: 'Teachcast Certificate of Completion (Teachcast, 2021)', image: '/certificates/Sertifikat-Teachcast-Level4.png' },
+  { title: 'Data Analytics in Practice Case Study: Finance & HR/People (Binus Online Learning, 2023)', image: '/certificates/Jason Ciayadi - 11 March 2023_page-0001.jpg' },
+  { title: 'Intro to Data Analytics (RevoU, 2025)', image: '/certificates/DAMC Sertifikat.jpg' },
+  { title: 'Intro to Software Engineering (RevoU, 2025)', image: '/certificates/SEFC Sertifikat.jpeg' },
+  { title: 'Humanizing Artificial Intelligence: Peta & Masa Depan Ekosistem AI Indonesia (ITB, 2025)', image: '/certificates/HumanizingAI_Sertifikat.jpg' },
+  { title: 'Bootcamp Kilat Full Stack Developer (harisenin.com, 2025)', image: '/certificates/Sertifikat - Jason Christopher Ciayadi-1.png' },
 ]
 
 export default function Skills() {
   const [selectedCert, setSelectedCert] = useState<{ title: string; image: string } | null>(null)
 
+  const chipClass =
+    'bg-slate-900/60 border border-slate-800 px-4 py-2 rounded-full text-sm text-slate-200 hover:bg-blue-500/10 hover:border-blue-500/30 transition'
+
   return (
-    <section id="skills" className="py-20 px-6 bg-gray-900 text-gray-200">
+    <section id="skills" className="py-20 px-6 bg-slate-950 text-slate-200 border-t border-slate-800">
       <motion.div
         className="max-w-6xl mx-auto"
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-        {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
-          Skills & Certifications
-        </h2>
-        {/* Hard Skills */}
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">Skills & Certifications</h2>
+
         <div className="grid md:grid-cols-4 gap-10 mb-16">
           {skillGroups.map((group, idx) => (
             <div key={idx}>
-              <h3 className="text-xl font-semibold text-blue-400 mb-6 text-center md:text-left">
-                {group.title}
-              </h3>
+              <h3 className="text-xl font-semibold text-blue-300 mb-6 text-center md:text-left">{group.title}</h3>
               <div className="grid grid-cols-2 gap-4">
                 {group.skills.map((skill, i) => (
                   <motion.div
                     key={i}
-                    whileHover={{ scale: 1.1 }}
-                    className="flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow hover:shadow-lg transition"
+                    whileHover={{ y: -2 }}
+                    className="flex flex-col items-center p-4 bg-slate-900/60 border border-slate-800 rounded-2xl hover:border-blue-500/40 transition"
                   >
                     <div className="text-3xl mb-2">{skill.icon}</div>
-                    <p className="text-sm font-medium">{skill.name}</p>
+                    <p className="text-sm font-medium text-center text-slate-200">{skill.name}</p>
                   </motion.div>
                 ))}
               </div>
             </div>
           ))}
         </div>
-        {/* Soft Skills */}
-        <div className="mb-16">
-          <h3 className="text-xl font-semibold text-blue-400 mb-6 text-center md:text-left">
-            Soft Skills
-          </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            {softSkills.map((skill, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.1 }}
-                className="flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow hover:shadow-lg transition"
-              >
-                <div className="text-3xl mb-2">{skill.icon}</div>
-                <p className="text-sm font-medium">{skill.name}</p>
-              </motion.div>
+
+        <div className="mb-12">
+          <h3 className="text-xl font-semibold text-blue-300 mb-6 text-center md:text-left">Hard Skills</h3>
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+            {hardSkills.map((s) => (
+              <span key={s} className={chipClass}>
+                {s}
+              </span>
             ))}
           </div>
         </div>
-        {/* Certifications */}
-        <div className="max-w-3xl mx-auto">
-          <h3 className="text-xl font-semibold text-blue-400 mb-4 text-center md:text-left">
-            Sertifikasi & Pelatihan
-          </h3>
-          <ul className="space-y-3">
-            {certifications.map((cert, idx) => {
-              // Pisahkan teks utama dan tanggal (dalam tanda kurung)
-              const match = cert.title.match(/^(.*?)\s*\((.*?)\)$/)
-              const titleText = match ? match[1] : cert.title
-              const dateText = match ? match[2] : null
 
-              return (
-                <motion.li
-                  key={idx}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="flex items-center justify-between gap-2"
+        <div className="mb-16">
+          <h3 className="text-xl font-semibold text-blue-300 mb-6 text-center md:text-left">Soft Skills</h3>
+          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+            {softSkills.map((s) => (
+              <span key={s} className={chipClass}>
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="max-w-3xl mx-auto">
+          <h3 className="text-xl font-semibold text-blue-300 mb-4 text-center md:text-left">Sertifikasi & Pelatihan</h3>
+          <ul className="space-y-3">
+            {certifications.map((cert, idx) => (
+              <motion.li
+                key={idx}
+                initial={{ opacity: 0, x: -14 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.45, delay: idx * 0.06 }}
+                viewport={{ once: true }}
+                className="flex items-center justify-between gap-2 bg-slate-900/40 border border-slate-800 rounded-xl px-4 py-3 hover:border-blue-500/30 transition"
+              >
+                <div className="flex items-center gap-2">
+                  <MdVerified className="text-blue-300" />
+                  <span className="text-slate-200">{cert.title}</span>
+                </div>
+                <button
+                  onClick={() => setSelectedCert(cert)}
+                  className="text-blue-300 hover:text-blue-200 transition"
+                  aria-label={`Lihat sertifikat ${cert.title}`}
                 >
-                  <div className="flex items-center gap-2">
-                    <MdVerified className="text-green-400" />
-                    <span>
-                      {titleText}{' '}
-                      {dateText && (
-                        <span className="text-blue-400">({dateText})</span>
-                      )}
-                    </span>
-                  </div>
-                  <button
-                    onClick={() => setSelectedCert(cert)}
-                    className="text-blue-400 hover:text-blue-300 transition"
-                    aria-label={`Lihat sertifikat ${cert.title}`}
-                  >
-                    <HiOutlineEye className="text-xl" />
-                  </button>
-                </motion.li>
-              )
-            })}
+                  <HiOutlineEye className="text-xl" />
+                </button>
+              </motion.li>
+            ))}
           </ul>
         </div>
-        {/* Modal Sertifikat */}
+
         {selectedCert && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
             onClick={() => setSelectedCert(null)}
           >
             <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
+              initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              className="bg-gray-900 p-4 rounded-lg shadow-lg max-w-2xl w-full relative"
+              transition={{ duration: 0.25 }}
+              className="bg-slate-950 border border-slate-800 p-4 rounded-2xl shadow-xl max-w-2xl w-full relative"
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="absolute top-2 right-3 text-gray-400 hover:text-white text-2xl"
+                className="absolute top-2 right-3 text-slate-400 hover:text-white text-2xl"
                 onClick={() => setSelectedCert(null)}
               >
                 &times;
               </button>
-              <h3 className="text-lg font-semibold mb-4 text-center text-blue-400">
-                {selectedCert.title}
-              </h3>
+
+              <h3 className="text-lg font-semibold mb-4 text-center text-blue-300">{selectedCert.title}</h3>
+
               <div className="flex justify-center">
                 <Image
                   src={selectedCert.image}
                   alt={selectedCert.title}
-                  width={800}
-                  height={600}
-                  className="rounded-lg border border-gray-700"
+                  width={900}
+                  height={650}
+                  className="rounded-xl border border-slate-800"
                 />
               </div>
             </motion.div>

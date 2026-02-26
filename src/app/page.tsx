@@ -10,7 +10,7 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <main className="relative z-10 text-black dark:text-white scroll-smooth">
+    <main className="relative z-10 scroll-smooth">
       <Navbar />
       <Hero />
       <About />
