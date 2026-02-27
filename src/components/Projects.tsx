@@ -1,10 +1,11 @@
 'use client'
 
 import { useState } from 'react'
+import { useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiOutlineClipboardList } from 'react-icons/hi'
-import { FaCode, FaDatabase, FaFileAlt, FaPhp, FaPython, FaJs } from 'react-icons/fa'
+import { FaCode, FaDatabase, FaFileAlt, FaPhp, FaPython, FaJs, FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa'
 import { SiBootstrap, SiFlask, SiMysql, SiMariadb } from 'react-icons/si'
 import { JSX } from 'react'
 
@@ -33,6 +34,9 @@ const projects: Project[] = [
       { name: 'ASP.Net', icon: <FaCode className="text-blue-300" /> },
       { name: 'C#', icon: <FaCode className="text-blue-300" /> },
       { name: 'Visual Basic', icon: <FaCode className="text-blue-300" /> },
+      { name: 'HTML', icon: <FaHtml5 className="text-blue-300" /> },
+      { name: 'CSS', icon: <FaCss3Alt className="text-blue-300" /> },
+      { name: 'JavaScript', icon: <FaJs className="text-blue-300" /> },
       { name: 'MS SQL Server', icon: <FaDatabase className="text-blue-300" /> },
       { name: 'MS RDLC', icon: <FaFileAlt className="text-blue-300" /> },
     ],
@@ -51,6 +55,7 @@ const projects: Project[] = [
       { name: 'Flask', icon: <SiFlask className="text-blue-300" /> },
       { name: 'MySQL', icon: <SiMysql className="text-blue-300" /> },
       { name: 'Bootstrap', icon: <SiBootstrap className="text-blue-300" /> },
+      { name: 'Git', icon: <FaGitAlt className="text-blue-300" /> },
     ],
   },
 
@@ -69,6 +74,7 @@ const projects: Project[] = [
       { name: 'JavaScript', icon: <FaJs className="text-blue-300" /> },
       { name: 'MySQL', icon: <SiMysql className="text-blue-300" /> },
       { name: 'MariaDB', icon: <SiMariadb className="text-blue-300" /> },
+      { name: 'Git', icon: <FaGitAlt className="text-blue-300" /> },
       { name: 'Testing/Debug', icon: <HiOutlineClipboardList className="text-blue-300" /> },
     ],
   },
@@ -76,7 +82,17 @@ const projects: Project[] = [
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+    useEffect(() => {
+  if (selectedProject) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'auto'
+  }
 
+  return () => {
+    document.body.style.overflow = 'auto'
+  }
+}, [selectedProject])
   return (
     <section id="projects" className="py-20 px-4 bg-slate-950 text-slate-200 border-t border-slate-800">
       <div className="max-w-6xl mx-auto">
@@ -113,12 +129,12 @@ export default function Projects() {
               onClick={() => setSelectedProject(project)}
               className="cursor-pointer bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden hover:border-blue-500/40 transition flex flex-col"
             >
-              <div className="relative w-full h-52">
+              <div className="relative w-full aspect-video bg-slate-900 flex items-center justify-center">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-contain p-4"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority={idx === 0}
                 />
