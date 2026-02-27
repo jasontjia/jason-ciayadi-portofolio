@@ -38,6 +38,23 @@ const projects: Project[] = [
     ],
   },
   {
+    title: 'Aplikasi Pengenalan Emosi Manusia melalui Suara (SVM)',
+    category: 'Skripsi (Jan-Jun 2024)',
+    role: 'Project (Research)',
+    description:
+      'Aplikasi pengenalan emosi melalui suara menggunakan algoritma Support Vector Machine (SVM) dengan Python dan Flask.',
+    link: '#',
+    repo: 'https://github.com/jasontjia/emodetect-svm',
+    image: '/projects/Beranda.png',
+    tech: [
+      { name: 'Python', icon: <FaPython className="text-blue-300" /> },
+      { name: 'Flask', icon: <SiFlask className="text-blue-300" /> },
+      { name: 'MySQL', icon: <SiMysql className="text-blue-300" /> },
+      { name: 'Bootstrap', icon: <SiBootstrap className="text-blue-300" /> },
+    ],
+  },
+
+  {
     title: 'Website Toko Asia Jaya Motor',
     category: 'Internship (Jun–Aug 2023)',
     role: 'Full Stack Developer Intern',
@@ -53,22 +70,6 @@ const projects: Project[] = [
       { name: 'MySQL', icon: <SiMysql className="text-blue-300" /> },
       { name: 'MariaDB', icon: <SiMariadb className="text-blue-300" /> },
       { name: 'Testing/Debug', icon: <HiOutlineClipboardList className="text-blue-300" /> },
-    ],
-  },
-  {
-    title: 'Aplikasi Pengenalan Emosi Manusia melalui Suara (SVM)',
-    category: 'Skripsi (2024)',
-    role: 'Project (Research)',
-    description:
-      'Aplikasi pengenalan emosi melalui suara menggunakan algoritma Support Vector Machine (SVM) dengan Python dan Flask.',
-    link: '#',
-    repo: 'https://github.com/jasontjia/emodetect-svm',
-    image: '/projects/Beranda.png',
-    tech: [
-      { name: 'Python', icon: <FaPython className="text-blue-300" /> },
-      { name: 'Flask', icon: <SiFlask className="text-blue-300" /> },
-      { name: 'MySQL', icon: <SiMysql className="text-blue-300" /> },
-      { name: 'Bootstrap', icon: <SiBootstrap className="text-blue-300" /> },
     ],
   },
 ]

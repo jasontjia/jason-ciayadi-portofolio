@@ -45,30 +45,33 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-6xl mx-auto pt-24 pb-16 md:pb-24 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Photo */}
-        {isClient ? (
-          <motion.div
-            style={{ rotateX, rotateY, scale }}
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="relative flex justify-center md:justify-start"
-          >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-44 h-72 md:w-72 md:h-[520px] rounded-2xl border border-blue-500/20 bg-slate-900/20 backdrop-blur-sm" />
-            </div>
+{isClient ? (
+  <motion.div
+    style={{ rotateX, rotateY, scale }}
+    initial={{ opacity: 0, y: 18 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, ease: 'easeOut' }}
+    className="relative flex justify-center md:justify-start"
+  >
+    <div className="relative w-64 sm:w-72 md:w-80 aspect-[3/4]">
+      
+      {/* Frame */}
+      <div className="absolute inset-0 rounded-2xl border border-blue-500/20 bg-slate-900/30 backdrop-blur-sm" />
 
-            <Image
-              src="/projects/jason-lulus.png"
-              alt="Foto Jason"
-              width={280}
-              height={520}
-              className="w-40 h-64 sm:w-48 sm:h-80 md:w-72 md:h-[520px] object-contain relative z-10 drop-shadow-xl"
-              priority
-            />
-          </motion.div>
-        ) : (
-          <div className="w-40 h-64 sm:w-48 sm:h-80 md:w-72 md:h-[520px] bg-slate-800 rounded-2xl mx-auto" />
-        )}
+      {/* Image */}
+      <Image
+        src="/projects/jason-it.png"
+        alt="Foto Jason"
+        fill
+        className="object-contain rounded-2xl p-6 relative z-10"
+        sizes="(max-width: 768px) 60vw, 320px"
+        priority
+      />
+        </div>
+      </motion.div>
+    ) : (
+      <div className="w-64 aspect-[3/4] bg-slate-800 rounded-2xl mx-auto" />
+    )}
 
         {/* Text */}
         <motion.div
