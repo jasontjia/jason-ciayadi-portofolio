@@ -40,6 +40,7 @@ const projects: Project[] = [
       { name: 'MS SQL Server', icon: <FaDatabase className="text-blue-300" /> },
       { name: 'MS Report Designer', icon: <FaFileAlt className="text-blue-300" /> },
       { name: 'MS Report Builder', icon: <FaFileAlt className="text-blue-300" /> },
+      { name: 'Testing/Debug', icon: <HiOutlineClipboardList className="text-blue-300" /> },
     ],
   },
   {
