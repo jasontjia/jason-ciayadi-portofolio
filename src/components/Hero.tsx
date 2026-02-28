@@ -85,7 +85,7 @@ export default function Hero() {
           </p>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 text-white">
-            Jason Christopher Ciayadi
+            Jason Christopher
           </h1>
 
           <p className="text-slate-300 mb-6 leading-relaxed max-w-xl mx-auto md:mx-0">

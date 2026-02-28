@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <span className="text-xl font-semibold tracking-tight text-blue-400">
-          Jason <span className="text-blue-400">Christopher</span> <span className="text-blue-400">Ciayadi</span>
+          Jason <span className="text-blue-400">Christopher</span> 
         </span>
 
         {/* Desktop Links */}
