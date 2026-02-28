@@ -19,8 +19,8 @@ const contacts = [
   {
     icon: <FaLinkedin className="text-blue-300 text-xl" />,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/jason-christopher-ciayadi-2038542b2',
-    link: 'https://linkedin.com/in/jason-christopher-ciayadi-2038542b2',
+    value: 'linkedin.com/in/jasonchristopher25',
+    link:  'https://www.linkedin.com/in/jasonchristopher25/',
   },
   {
     icon: <FaGithub className="text-blue-300 text-xl" />,
