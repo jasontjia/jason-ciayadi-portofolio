@@ -38,7 +38,8 @@ const projects: Project[] = [
       { name: 'CSS', icon: <FaCss3Alt className="text-blue-300" /> },
       { name: 'JavaScript', icon: <FaJs className="text-blue-300" /> },
       { name: 'MS SQL Server', icon: <FaDatabase className="text-blue-300" /> },
-      { name: 'MS RDLC', icon: <FaFileAlt className="text-blue-300" /> },
+      { name: 'MS Report Designer', icon: <FaFileAlt className="text-blue-300" /> },
+      { name: 'MS Report Builder', icon: <FaFileAlt className="text-blue-300" /> },
     ],
   },
   {

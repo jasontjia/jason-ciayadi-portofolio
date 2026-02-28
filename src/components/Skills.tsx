@@ -42,8 +42,8 @@ const skillGroups = [
     title: 'Tools & Design',
     skills: [
       { name: 'VS Code', icon: <FaCode className="text-blue-300" /> },
-      { name: 'Microsoft Report Designer', icon: <FaFileAlt className="text-blue-300" /> },
-      { name: 'Microsoft Report Builder', icon: <FaFileAlt className="text-blue-300" /> },
+      { name: 'MS Report Designer', icon: <FaFileAlt className="text-blue-300" /> },
+      { name: 'MS Report Builder', icon: <FaFileAlt className="text-blue-300" /> },
       { name: 'Git', icon: <FaGitAlt className="text-blue-300" /> },
       { name: 'GitHub', icon: <FaGithub className="text-blue-300" /> },
       { name: 'Figma', icon: <SiFigma className="text-blue-300" /> },
