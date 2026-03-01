@@ -92,7 +92,7 @@ export default function Hero() {
             Berpengalaman dalam maintenance & incident handling aplikasi bisnis internal.
             Fokus pada troubleshooting, testing, debugging, dan pengelolaan data menggunakan{' '}
             <span className="font-semibold text-blue-300">MS SQL Server</span>. Tech stack utama:{' '}
-            <span className="font-semibold text-blue-300">ASP.Net, C#, Visual Basic</span>.
+            <span className="font-semibold text-blue-300">ASP.NET, C#, Visual Basic</span>.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">

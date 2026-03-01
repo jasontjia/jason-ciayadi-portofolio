@@ -20,7 +20,7 @@ export default function About() {
     },
     {
       title: 'Proyek Skripsi',
-      place: 'Pengenalan Emosi via Suara (SVM) — Python & Flask',
+      place: 'Aplikasi Pengenalan Emosi Manusia via Audio (SVM) — Python & Flask',
       year: 'Jan 2024 - Jun 2024',
       icon: <FaGraduationCap className="text-blue-300 text-xl" />,
     },
@@ -40,10 +40,10 @@ export default function About() {
         <p className="text-slate-400 max-w-3xl mx-auto leading-relaxed mb-10">
           Lulusan Teknik Informatika dengan pengalaman dalam maintenance, troubleshooting, testing,
           debugging, dan incident handling aplikasi internal. Terbiasa menggunakan{' '}
-          <span className="font-semibold text-blue-300">ASP.Net</span>,{' '}
+          <span className="font-semibold text-blue-300">ASP.NET</span>,{' '}
           <span className="font-semibold text-blue-300">C#</span>,{' '}
           <span className="font-semibold text-blue-300">Visual Basic</span>,{' '}
-          <span className="font-semibold text-blue-300">HTML/CSS/JavaScript</span>, serta{' '}
+          <span className="font-semibold text-blue-300">HTML, CSS, JavaScript</span>, serta{' '}
           <span className="font-semibold text-blue-300">MS SQL Server</span> untuk memastikan
           aplikasi berjalan stabil dan sesuai kebutuhan operasional.
         </p>

@@ -8,6 +8,10 @@ import { HiOutlineClipboardList } from 'react-icons/hi'
 import { FaCode, FaDatabase, FaFileAlt, FaPhp, FaPython, FaJs, FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa'
 import { SiBootstrap, SiFlask, SiMysql, SiMariadb } from 'react-icons/si'
 import { JSX } from 'react'
+import { FaChartLine } from 'react-icons/fa'
+import { FaBrain } from 'react-icons/fa'
+import { FaProjectDiagram } from 'react-icons/fa'
+import { FaGlobe } from 'react-icons/fa'
 
 type Project = {
   title: string
@@ -31,7 +35,7 @@ const projects: Project[] = [
     repo: '',
     image: '/projects/IMFI.jpg',
     tech: [
-      { name: 'ASP.Net', icon: <FaCode className="text-blue-300" /> },
+      { name: 'ASP.NET', icon: <FaCode className="text-blue-300" /> },
       { name: 'C#', icon: <FaCode className="text-blue-300" /> },
       { name: 'Visual Basic', icon: <FaCode className="text-blue-300" /> },
       { name: 'HTML', icon: <FaHtml5 className="text-blue-300" /> },
@@ -58,6 +62,9 @@ const projects: Project[] = [
       { name: 'MySQL', icon: <SiMysql className="text-blue-300" /> },
       { name: 'Bootstrap', icon: <SiBootstrap className="text-blue-300" /> },
       { name: 'Git', icon: <FaGitAlt className="text-blue-300" /> },
+      { name: 'Web Development', icon: <FaGlobe className="text-blue-300" /> },
+      { name: 'Machine Learning', icon: <FaBrain className="text-blue-300" /> },
+      { name: 'Data Analytics', icon: <FaChartLine className="text-blue-300" /> },
     ],
   },
 
@@ -78,6 +85,8 @@ const projects: Project[] = [
       { name: 'MariaDB', icon: <SiMariadb className="text-blue-300" /> },
       { name: 'Git', icon: <FaGitAlt className="text-blue-300" /> },
       { name: 'Testing/Debug', icon: <HiOutlineClipboardList className="text-blue-300" /> },
+      { name: 'Web Development', icon: <FaGlobe className="text-blue-300" /> },
+      { name: 'ERP Implementation', icon: <FaProjectDiagram className="text-blue-300" /> },
     ],
   },
 ]

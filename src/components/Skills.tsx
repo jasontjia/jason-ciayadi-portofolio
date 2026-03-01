@@ -16,7 +16,7 @@ const skillGroups = [
       { name: 'CSS', icon: <FaCss3Alt className="text-blue-300" /> },
       { name: 'TailwindCSS', icon: <SiTailwindcss className="text-blue-300" /> },
       { name: 'Bootstrap', icon: <SiBootstrap className="text-blue-300" /> },
-      { name: 'ASP.Net', icon: <FaCode className="text-blue-300" /> },
+      { name: 'ASP.NET', icon: <FaCode className="text-blue-300" /> },
     ],
   },
   {
@@ -51,7 +51,7 @@ const skillGroups = [
   },
 ]
 
-const hardSkills = ['Web Programming', 'Analisis Sistem', 'Manajemen Proyek', 'Sistem Informasi', 'Desain Antarmuka']
+const hardSkills = ['Web Programming', 'Analisis Sistem', 'Manajemen Proyek', 'Sistem Informasi', 'Desain Antarmuka', 'Testing', 'Debugging']
 const softSkills = ['Kepemimpinan', 'Kolaborasi', 'Komunikasi', 'Problem Solving', 'Pengambilan Keputusan']
 
 const certifications = [
