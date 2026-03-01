@@ -61,6 +61,7 @@ const certifications = [
   { title: 'Intro to Software Engineering (RevoU, 2025)', image: '/certificates/SEFC Sertifikat.jpeg' },
   { title: 'Humanizing Artificial Intelligence: Peta & Masa Depan Ekosistem AI Indonesia (ITB, 2025)', image: '/certificates/HumanizingAI_Sertifikat.jpg' },
   { title: 'Bootcamp Kilat Full Stack Developer (harisenin.com, 2025)', image: '/certificates/Sertifikat - Jason Christopher Ciayadi-1.png' },
+  { title: 'Bootcamp Kilat Full Stack Developer (harisenin.com, 2025)', image: '/certificates/sertifikat_basic-JasonCiayadi.jpg' },
 ]
 
 export default function Skills() {
