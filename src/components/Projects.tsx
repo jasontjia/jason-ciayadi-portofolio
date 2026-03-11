@@ -5,8 +5,8 @@ import { useEffect } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiOutlineClipboardList } from 'react-icons/hi'
-import { FaCode, FaDatabase, FaFileAlt, FaPhp, FaPython, FaJs, FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa'
-import { SiBootstrap, SiFlask, SiMysql, SiMariadb } from 'react-icons/si'
+import { FaDatabase, FaChartBar, FaPhp, FaPython, FaJs, FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa'
+import { SiBootstrap, SiFlask, SiMysql, SiMariadb, SiDotnet, SiSharp } from 'react-icons/si'
 import { JSX } from 'react'
 import { FaChartLine } from 'react-icons/fa'
 import { FaBrain } from 'react-icons/fa'
@@ -35,15 +35,14 @@ const projects: Project[] = [
     repo: '',
     image: '/projects/IMFI.jpg',
     tech: [
-      { name: 'ASP.NET', icon: <FaCode className="text-blue-300" /> },
-      { name: 'C#', icon: <FaCode className="text-blue-300" /> },
-      { name: 'Visual Basic', icon: <FaCode className="text-blue-300" /> },
+      { name: 'VB.NET', icon: <SiDotnet className="text-blue-300" /> },
+      { name: 'C#', icon: <SiSharp className="text-blue-300" /> },
       { name: 'HTML', icon: <FaHtml5 className="text-blue-300" /> },
       { name: 'CSS', icon: <FaCss3Alt className="text-blue-300" /> },
       { name: 'JavaScript', icon: <FaJs className="text-blue-300" /> },
       { name: 'MS SQL Server', icon: <FaDatabase className="text-blue-300" /> },
-      { name: 'MS Report Designer', icon: <FaFileAlt className="text-blue-300" /> },
-      { name: 'MS Report Builder', icon: <FaFileAlt className="text-blue-300" /> },
+      { name: 'MS Report Designer', icon: <FaChartBar  className="text-blue-300" /> },
+      { name: 'MS Report Builder', icon: <FaChartBar  className="text-blue-300" /> },
       { name: 'Testing/Debug', icon: <HiOutlineClipboardList className="text-blue-300" /> },
     ],
   },
