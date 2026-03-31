@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { MdVerified } from 'react-icons/md'
 import { HiOutlineEye } from 'react-icons/hi'
 import { FaChartBar , FaHtml5, FaCss3Alt, FaJs, FaPhp, FaPython, FaGitAlt, FaGithub, FaDatabase } from 'react-icons/fa'
-import { SiTailwindcss, SiBootstrap, SiFlask, SiMysql, SiMariadb, SiFigma, SiDotnet } from 'react-icons/si'
+import { SiTailwindcss, SiBootstrap, SiFlask, SiMysql, SiMariadb, SiFigma, SiDotnet, SiJquery  } from 'react-icons/si'
 import { DiVisualstudio } from "react-icons/di";
 import { VscVscode } from "react-icons/vsc";
 
@@ -19,6 +19,7 @@ const skillGroups = [
       { name: 'TailwindCSS', icon: <SiTailwindcss className="text-blue-300" /> },
       { name: 'Bootstrap', icon: <SiBootstrap className="text-blue-300" /> },
       { name: 'ASP.NET', icon: <SiDotnet className="text-blue-300" /> },
+      { name: 'jQuery', icon: <SiJquery className="text-blue-300" /> },
     ],
   },
   {
