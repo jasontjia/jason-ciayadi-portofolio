@@ -81,7 +81,7 @@ export default function Hero() {
           className="text-center md:text-left"
         >
           <p className="text-sm text-blue-300/90 font-medium mb-3">
-            IT Support Business Application
+            Full Stack Developer
           </p>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 text-white">

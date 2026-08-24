@@ -7,7 +7,7 @@ import { FaGraduationCap } from 'react-icons/fa'
 export default function About() {
   const experiences = [
     {
-      title: 'IT Support Business Application Staff',
+      title: 'Full Stack Developer',
       place: 'PT. Indomobil Finance Indonesia — Jakarta Timur',
       year: 'Des 2025 - Sekarang',
       icon: <MdWork className="text-blue-300 text-xl" />,

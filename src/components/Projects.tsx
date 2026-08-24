@@ -28,7 +28,7 @@ const projects: Project[] = [
   {
     title: 'Enterprise Business Application Support',
     category: 'PT. Indomobil Finance Indonesia (Des 2025 - Sekarang)',
-    role: 'IT Support Business Application',
+    role: 'Full Stack Developer',
     description:
       'Maintenance, troubleshooting, enhancement minor, monitoring aplikasi bisnis internal berbasis ASP.NET, VB.NET, pengelolaan query MS SQL Server, dan pembuatan report menggunakan MS Report Builder, MS Report Designer.',
     link: '#',
