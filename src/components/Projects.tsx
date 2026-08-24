@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiOutlineClipboardList } from 'react-icons/hi'
 import { FaDatabase, FaChartBar, FaPhp, FaPython, FaJs, FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa'
-import { SiBootstrap, SiFlask, SiMysql, SiMariadb, SiDotnet, SiJquery } from 'react-icons/si'
+import { SiBootstrap, SiFlask, SiMysql, SiMariadb, SiDotnet, SiJquery, SiTailwindcss } from 'react-icons/si'
 import { JSX } from 'react'
 import { FaChartLine } from 'react-icons/fa'
 import { FaBrain } from 'react-icons/fa'
@@ -39,6 +39,8 @@ const projects: Project[] = [
       { name: 'VB.NET', icon: <SiDotnet className="text-blue-300" /> },
       { name: 'HTML', icon: <FaHtml5 className="text-blue-300" /> },
       { name: 'CSS', icon: <FaCss3Alt className="text-blue-300" /> },
+      { name: 'TailwindCSS', icon: <SiTailwindcss className="text-blue-300" /> },
+      { name: 'Bootstrap', icon: <SiBootstrap className="text-blue-300" /> },
       { name: 'JavaScript', icon: <FaJs className="text-blue-300" /> },
       { name: 'jQuery', icon: <SiJquery className="text-blue-300" /> },
       { name: 'MS SQL Server', icon: <FaDatabase className="text-blue-300" /> },
